@@ -1,4 +1,5 @@
 ---
+# Recent Version can be found on https://raw.githubusercontent.com/iMi-digital/gdpr-dump-moodle/main/moodle.yaml
 tables:
     mdl_logstore_standard_log:
         truncate: true
