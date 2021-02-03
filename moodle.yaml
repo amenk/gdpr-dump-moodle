@@ -71,3 +71,29 @@ tables:
             content:
                 converter: 'randomizeText'
 
+
+    mdl_external_tokens:
+        # we set the tokens based on the ID to something unique and well known
+        converters:
+            token:
+                converter: 'chain'
+                parameters:
+                    converters:
+                        - converter: 'fromContext'
+                          parameters:
+                              key: 'row_data.id'
+                        - converter: 'appendText'
+                          parameters:
+                             value: 'ffffffffffffffffffffffffffffffff'
+            privatetoken:
+                converter: 'chain'
+                parameters:
+                    converters:
+                        - converter: 'fromContext'
+                          parameters:
+                              key: 'row_data.id'
+                        - converter: 'appendText'
+                          parameters:
+                             value: 'ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'
+
+
